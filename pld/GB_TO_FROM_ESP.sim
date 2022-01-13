@@ -1,0 +1,62 @@
+%SIGNAL
+PIN   8 =  A12 
+PIN   7 =  A13 
+PIN   6 =  A14 
+PIN   5 =  A15 
+PIN  19 =  STcp 
+PIN   1 =  clk 
+PIN   4 =  cs 
+PIN  18 =  espInputInterupt 
+PIN  16 =  espReadInterupt 
+PIN   9 =  espReady 
+PIN  11 = !oe 
+PIN   3 =  rd 
+PIN  15 =  readyData 
+PIN  17 =  sipoOE 
+PIN   2 =  wr 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+STcp =>
+    !A12 & A13 & !A14 & A15 & !cs & rd & !wr
+
+addr =>
+    !A12 & A13 & !A14 & A15
+
+espInputInterupt =>
+    !A12 & A13 & !A14 & A15 & !cs & rd & !wr
+
+espReadInterupt =>
+    !A12 & A13 & !A14 & A15 & !cs & !rd & wr
+
+read =>
+    !A12 & A13 & !A14 & A15 & !cs & !rd & wr
+
+readyData =>
+    espReady
+
+readyData.oe  =>
+    A12 & A13 & !A14 & A15
+
+sipoOE =>
+    !A12 & A13 & !A14 & A15 & !cs & !rd & wr
+
+write =>
+    !A12 & A13 & !A14 & A15 & !cs & rd & !wr
+
+STcp.oe  =>
+    1 
+
+espInputInterupt.oe  =>
+    1 
+
+espReadInterupt.oe  =>
+    1 
+
+sipoOE.oe  =>
+    1 
+
+%END

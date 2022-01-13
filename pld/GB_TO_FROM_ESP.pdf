@@ -1,0 +1,176 @@
+{COMPONENT Z:\HOME\JESSE\GB STUFF\PROJECT\PLD\GB_TO_FROM_ESP.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Tue Jan 04 13:44:35 2022 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P CLK {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
+   {P WR {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
+   {P RD {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P CS {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P A15 {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P A14 {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P A13 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P A12 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P ESPREADY {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P OE' {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P READYDAT {Pt "I/O"}{Lq 0}{Ploc 360 20}}
+   {P ESPREADI {Pt "I/O"}{Lq 0}{Ploc 360 40}}
+   {P SIPOOE {Pt "I/O"}{Lq 0}{Ploc 360 60}}
+   {P ESPINPUT {Pt "I/O"}{Lq 0}{Ploc 360 80}}
+   {P STCP {Pt "I/O"}{Lq 0}{Ploc 360 100}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 230 230}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 210}
+   {Pnl 120 190}
+   {Pnl 120 170}
+   {Pnl 120 150}
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 340 30}
+   {Pnl 340 50}
+   {Pnl 340 70}
+   {Pnl 340 90}
+   {Pnl 340 110}
+
+   {Sd A 1 2 3 4 5 6 7 8 9 11 15 16 17 18 19}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 220 330 0}
+   {L 130 200 100 200}
+   {L 130 180 100 180}
+   {L 130 160 100 160}
+   {L 130 140 100 140}
+   {L 130 120 100 120}
+   {L 130 100 100 100}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 120 20 100 20}
+   {C 125 20 5}
+   {L 330 20 360 20}
+   {L 330 40 360 40}
+   {L 330 60 360 60}
+   {L 330 80 360 80}
+   {L 330 100 360 100}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "CLK" 140 200}
+   {T "WR" 140 180}
+   {T "RD" 140 160}
+   {T "CS" 140 140}
+   {T "A15" 140 120}
+   {T "A14" 140 100}
+   {T "A13" 140 80}
+   {T "A12" 140 60}
+   {T "ESPREADY" 140 40}
+   {T "OE'" 140 20}
+   [Tj "RC"]
+   {T "READYDAT" 320 20}
+   {T "ESPREADI" 320 40}
+   {T "SIPOOE" 320 60}
+   {T "ESPINPUT" 320 80}
+   {T "STCP" 320 100}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G16V8MA" 230 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD Z:\HOME\JESSE\GB STUFF\PROJECT\PLD\GB_TO_FROM_ESP 230 220}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N CLK
+   }
+   {N WR
+   }
+   {N RD
+   }
+   {N CS
+   }
+   {N A15
+   }
+   {N A14
+   }
+   {N A13
+   }
+   {N A12
+   }
+   {N ESPREADY
+   }
+   {N OE'
+   }
+   {N READYDAT
+   }
+   {N ESPREADI
+   }
+   {N SIPOOE
+   }
+   {N ESPINPUT
+   }
+   {N STCP
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}
